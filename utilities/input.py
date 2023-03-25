@@ -6,5 +6,5 @@ def openInput(day):
     dir = dir.replace('utilities', 'input/')
     
     with open(dir + day + ".txt", "r") as i:
-        return i.readlines()
+        return i.read().splitlines()
     
