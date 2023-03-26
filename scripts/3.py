@@ -30,4 +30,50 @@ def solvePuzzle(input):
 
     print("Part one: " + str(gamma * epsilon))
 
-    
+    oxygen = input
+    for i in range(len(oxygen[0])):
+        print(i)
+        common = getMostCommonAtIndex(oxygen, i)
+        if common:
+            common = "1"
+        else:
+            common = "0"
+        oxygen = filterSet(oxygen, i, common)
+
+        if len(oxygen) == 1:
+            oxygen = oxygen[0]
+            break
+
+    c02 = input
+    for i in range(len(c02[0])):
+        common = getMostCommonAtIndex(c02, i)
+        if common:
+            common = "0"
+        else:
+            common = "1"
+        c02 = filterSet(c02, i, common)
+
+        if len(c02) == 1:
+            c02 = c02[0]
+            break
+
+    oxygen = int(oxygen, 2)
+    c02 = int(c02, 2)
+
+    print("Part two: " + str(oxygen * c02))
+
+def filterSet(s, index, y):
+    def iteratorFunc(x):
+        return x[index] == y
+		
+    return list(filter(iteratorFunc, s))
+
+def getMostCommonAtIndex(input, index):
+    common = 0
+    for i in input:
+        if int(i[index]):
+            common += 1
+        else:
+            common -= 1
+            
+    return common >= 0
