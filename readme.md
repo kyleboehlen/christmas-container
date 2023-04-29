@@ -10,3 +10,9 @@ Writing a solve for a puzzle:
 5. Profit
 
 Idk dude, I wrote this at like 1AM
+
+If you have homebrew you gotta install python3 and numpy
+
+`homebrew install python3`
+
+`python3 -m pip install numpy`
