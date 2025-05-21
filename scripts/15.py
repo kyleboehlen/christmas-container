@@ -1,0 +1,2 @@
+def solvePuzzle(input):
+    return ''

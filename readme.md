@@ -1,18 +1,20 @@
-Put your input in the input directory as `{day}.txt`
+# Christmas Container
+This is simply a container with python tooling and boilerplate for participating in Advent of Code
+## Usage
+You can simply run the docker compose file, develop the files locally as they'll be mounted as a volume, and run the app by calling
 
-Running the script:
 `python3 app.py`
 
-Writing a solve for a puzzle:
-1. In the scripts directory create a module `{day}.py`
-2. Specify a function `solvePuzzle(input)`
-4. ????
-5. Profit
+from the docker container CLI in `/app`
 
-Idk dude, I wrote this at like 1AM
+You'll need to add your input to the correct `./input/{day}.txt` file and write your solution in the corresponding `./scripts/{day}.py file`
 
-If you have homebrew you gotta install python3 and numpy
+### Using Friday?
 
-`homebrew install python3`
+If you're using Friday you can:
+- Run a command to clone and instantiate the project for you
+- Use your session cookie to import all of your inputs automatically
+- Run the application through Friday as a proxy to automatically pass the day instead of inputting it on script start
 
-`python3 -m pip install numpy`
+For more information run
+`./friday.sh aoc --help`
