@@ -10,13 +10,3 @@ You can simply run the docker compose file, develop the files locally as they'll
 from the docker container CLI in `/app`
 
 You'll need to add your input to the correct `./input/{day}.txt` file and write your solution in the corresponding `./scripts/{day}.py file`
-
-### Using Friday?
-
-If you're using Friday you can:
-- Run a command to clone and instantiate the project for you
-- Use your session cookie to import all of your inputs automatically
-- Run the application through Friday as a proxy to automatically pass the day instead of inputting it on script start
-
-For more information run
-`./friday.sh aoc --help`
